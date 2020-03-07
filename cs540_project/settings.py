@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'cs540_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'cs540_group07',
-        'USER': 'cs540_group07',
-        'PASSWORD': 'JNu6VAXUnpPH',
-        'HOST': 'classmysql.engr.oregonstate.edu',   # Or an IP Address that your DB is hosted on
+        'NAME': 'crash_data',
+        'USER': 'eason',
+        'PASSWORD': 'pa55word',
+        'HOST': '34.83.53.44',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
 }

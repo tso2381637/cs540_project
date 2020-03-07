@@ -10,4 +10,4 @@ $ git clone https://github.com/tso2381637/cs540_project.git
 //Build virtual environment
 $ docker-compose up --build
 ```
-- Open http://localhost:8000/index/ on browser
+- Open http://localhost:8000 on browser

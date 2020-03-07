@@ -1,6 +1,7 @@
 <h1>How to develop</h1>
-- Download Docker
-https://www.docker.com/
+
+- Download Docker https://www.docker.com/
+- Flip following command
 
 ``` console
 //Clone project from github

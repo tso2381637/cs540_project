@@ -1,0 +1,23 @@
+.container{
+
+}
+
+.header{
+    background-color: #F1F1F1;
+    text-align: center;
+    margin: auto;
+}
+
+.heading-button{
+    margin: auto;
+}
+
+table{
+    table-layout: fixed ;
+    width: 100% ;
+    font-size: 20px;
+}
+
+td{
+    width:25%;
+}

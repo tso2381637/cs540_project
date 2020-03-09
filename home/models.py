@@ -24,6 +24,18 @@ class AllCleanedCrashData(models.Model):
     injured_count = models.TextField(verbose_name="injuredCount", blank=True, null=True)
     crash_time = models.DateTimeField(verbose_name="crashTime", blank=True, null=True)
 
+class WeaTest(models.Model):
+    id = models.BigIntegerField(verbose_name="id",primary_key=True)
+    cond1 = models.CharField(db_column='cond1', max_length=100, blank=True, null=True)  # Field name made lowercase.
+    cond2 = models.CharField(db_column='cond2', max_length=100, blank=True, null=True)  # Field name made lowercase.
+    cond3 = models.CharField(db_column='cond3', max_length=100, blank=True, null=True)  # Field name made lowercase.
+
+    class Meta:
+        managed = False
+        db_table = 'wea_test'
+
+
+
 def query_data_by_args(**kwargs):
     draw = int(kwargs.get('draw', None)[0])
     length = int(kwargs.get('length', None)[0])

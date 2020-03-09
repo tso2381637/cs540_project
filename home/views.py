@@ -7,15 +7,19 @@ from django.views.generic.list import ListView
 from django.http import HttpResponse
 
 from .serializer import AllCleanedCrashDataSerializer
-from .models import AllCleanedCrashData, query_data_by_args
+from .models import AllCleanedCrashData, query_data_by_args,WeaTest
+#from .weatherModels import WeaTest
 # Create your views here.
 
 def index(request):
-
     return render(request,'index.html')
 
 def demo(request):
     return render(request,'demo.html')
+
+def weather(request):
+    wead = WeaTest.objects.get(id=1)
+    return render(request,'weather.html',{'weads': wead})
 
 # @api_view(['GET',])
 # def demo(request):

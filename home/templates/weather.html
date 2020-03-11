@@ -3,6 +3,12 @@
 {% block content %}
 
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<div class="container">
+    <div class="row">
+       <h2><span style="font-size:2rem;color: #159e35;">Weather condition</span></h2>
+    </div>
+    </div>
+</div>
 <input type="hidden" id="ig" name="ig" value="{{ weads.ice_fog }}">
 <input type="hidden" id="hg" name="hg" value="{{ weads.heavy_fog }}">
 <input type="hidden" id="thu" name="thu" value="{{ weads.thunder }}">
@@ -53,7 +59,7 @@
         },
 
         xaxis: {
-            categories: ["Ice_fog", "Heavy_fog", "Thunder", "Ice_pellets", "Hail", "Glaze_or_Rime", "Smoke_or_Haze", "Blowing", "High_winds"],
+            categories: ["Ice_fog", "Heavy_fog", "Thunder", "Ice_pellets", "Hail", "Glaze_or_Rime", "Smoke_or_Haze", "Blowing_spray", "High_winds"],
             position: 'top',
             axisBorder: {
                 show: false

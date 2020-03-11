@@ -2,42 +2,31 @@
 
 
 {% block content %}
-    <table id="datatable" class="table table-striped  table-sm" width="100%">
-        <thead>
+<!--<div class="row">-->
+<!--    <div class="form-group col-10">-->
+<!--        <label for="SQLSearch">SQL:</label>-->
+<!--        <textarea id="SQLSearchTextarea" for=" SQLSearch" rows="5" class="form-control input-sm"-->
+<!--                  placeholder="Input SQL"></textarea>-->
+<!--    </div>-->
+<!--    <div class="form-group col-2">-->
+<!--        <button id="SQLSearch" class="btn-query form-control btn btn-primary">Query</button>-->
+<!--    </div>-->
+<!--</div>-->
+<table id="datatable" class="table table-striped  table-sm" width="100%">
+    <thead>
     <tr>
-    <th>id</th>
-    <th>cid</th>
-    <th>city</th>
-    <th>latitude</th>
-    <th>longitude</th>
-    <th>street_name</th>
-    <th>injured_count</th>
-    <th>crash_time</th>
+        <th>id</th>
+        <th>cid</th>
+        <th>city</th>
+        <th>latitude</th>
+        <th>longitude</th>
+        <th>street_name</th>
+        <th>injured_count</th>
+        <th>crash_time</th>
     </tr>
     </thead>
-        <tbody>
-<!--    {% for t in data %}-->
-<!--    <tr>-->
-<!--        <td>{{ t.id }}</td>-->
-<!--    <td>{{ t.cid }}</td>-->
-<!--    <td>{{ t.city }}</td>-->
-<!--    <td>{{ t.latitude|floatformat:-6 }}</td>-->
-<!--    <td>{{ t.longitude|floatformat:-6 }}</td>-->
-<!--    <td>{{ t.create_date }}</td>-->
-<!--    <td>{{ t.street_name }}</td>-->
-<!--    <td>{{ t.injured_count }}</td>-->
-<!--    <td>{{ t.crash_time }}</td>-->
-<!--    </tr>-->
-<!--    {% endfor %}-->
-        </tbody>
+    <tbody>
+
+    </tbody>
 </table>
-<!--<nav aria-label="Page navigation example">-->
-<!--  <ul class="pagination">-->
-<!--    <li class="page-item"><a class="page-link" href="#">Previous</a></li>-->
-<!--    <li class="page-item"><a class="page-link" href="#">1</a></li>-->
-<!--    <li class="page-item"><a class="page-link" href="#">2</a></li>-->
-<!--    <li class="page-item"><a class="page-link" href="#">3</a></li>-->
-<!--    <li class="page-item"><a class="page-link" href="#">Next</a></li>-->
-<!--  </ul>-->
-<!--</nav>-->
 {% endblock content%}

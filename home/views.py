@@ -17,13 +17,6 @@ def index(request):
 def demo(request):
     return render(request,'demo.html')
 
-# @api_view(['GET',])
-# def demo(request):
-#     data = AllCleanedCrashData.objects.all()[:200]
-#     if request.method == 'GET':
-#         serializer = AllCleanedCrashDataSerializer(data,many=True)
-#         return Response(serializer.data)
-
 class DemoViewSet(viewsets.ModelViewSet):
     queryset = AllCleanedCrashData.objects.all()
     serializer_class = AllCleanedCrashDataSerializer
@@ -41,19 +34,3 @@ class DemoViewSet(viewsets.ModelViewSet):
 
         except Exception as e:
             return Response(e, status=status.HTTP_404_NOT_FOUND, template_name=None, content_type=None)
-    # def list(self, request, **kwargs):
-    #     try:
-    #         data = AllCleanedCrashData.objects.all()[0:200]
-    #         serializer = AllCleanedCrashDataSerializer(data, many=True)
-    #
-    #         return Response(serializer.data, status=status.HTTP_200_OK, template_name=None, content_type=None)
-    #
-    #     except Exception as e:
-    #         return Response(e.message, status=status.HTTP_404_NOT_FOUND, template_name=None, content_type=None)
-
-
-# class DataListView(ListView):
-#     model = AllCleanedCrashData
-#     template_name = 'demo.html'
-#     context_object_name = 'data'
-#     paginate_by = 5000

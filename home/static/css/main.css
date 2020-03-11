@@ -1,26 +1,33 @@
-.container{
+.container {
 
 }
 
-.header{
+.header {
     background-color: #F1F1F1;
     text-align: center;
     margin: auto;
 }
 
-.heading-button{
+.heading-button {
     margin: auto;
 }
 
-table{
+table {
     table-layout: fixed;
     font-size: 20px;
 }
 
-.table{
+.table {
     font-size: 12px;
 }
 
-td{
-    width:25%;
+.btn-query {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 1rem;
+}
+
+td {
+    width: 25%;
 }

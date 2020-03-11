@@ -26,5 +26,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/',include(router.urls)),
     path('',views.index,name='home-index'),
-    path('demo', views.demo, name = 'home-demo')
+    path('demo', views.demo, name = 'home-demo'),
+    path('weather', views.weather, name = 'home-weather')
 ]

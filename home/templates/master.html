@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+.footer {
+   height: 100px;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #1B213B;
+   color: white;
+   text-align: center;
+}
+</style>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -13,11 +25,14 @@
 <div class="header">
     <button class="btn btn-lg col-3 heading-button" onclick="location.href='{% url 'home-index' %}'">Readme</button>
     <button class="btn btn-lg col-3 heading-button" onclick="location.href='{% url 'home-demo' %}'">Demo</button>
+    <button class="btn btn-lg col-3 heading-button" onclick="location.href='{% url 'home-weather' %}'">Weather</button>
 </div>
 <div class="container">
     {% block content %}
     {% endblock content %}
 </div>
+<!--<div class="footer">-->
+<!--    </div>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"

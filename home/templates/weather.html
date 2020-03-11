@@ -1,0 +1,110 @@
+{% extends "master.html" %}
+
+{% block content %}
+
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<input type="hidden" id="ig" name="ig" value="{{ weads.ice_fog }}">
+<input type="hidden" id="hg" name="hg" value="{{ weads.heavy_fog }}">
+<input type="hidden" id="thu" name="thu" value="{{ weads.thunder }}">
+<input type="hidden" id="ip" name="ip" value="{{ weads.ice_pellets }}">
+<input type="hidden" id="hail" name="hail" value="{{ weads.hail }}">
+<input type="hidden" id="gor" name="gor" value="{{ weads.glaze_or_rime }}">
+<input type="hidden" id="soh" name="soh" value="{{ weads.smoke_or_haze }}">
+<input type="hidden" id="blow" name="blow" value="{{ weads.blowing }}">
+<input type="hidden" id="hw" name="hw" value="{{ weads.high_winds }}">
+<div id="chart">
+</div>
+<script type="application/javascript">
+    var igv = document.getElementById("ig").getAttribute('value');
+    var hgv = document.getElementById("hg").getAttribute('value');
+    var thuv = document.getElementById("thu").getAttribute('value');
+    var ipv  = document.getElementById("ip").getAttribute('value');
+    var hailv= document.getElementById("hail").getAttribute('value');
+    var gorv = document.getElementById("gor").getAttribute('value');
+    var sohv = document.getElementById("soh").getAttribute('value');
+    var blowv = document.getElementById("blow").getAttribute('value');
+    var hwv = document.getElementById("hw").getAttribute('value');
+   var options = {
+          series: [{
+          name: 'Inflation',
+          data: [igv, hgv,thuv, ipv, hailv, gorv, sohv,blowv, hwv]
+        }],
+          chart: {
+          height: 350,
+          type: 'bar',
+        },
+        plotOptions: {
+          bar: {
+            dataLabels: {
+              position: 'top', // top, center, bottom
+            },
+          }
+        },
+        dataLabels: {
+          enabled: true,
+          formatter: function (val) {
+            return val + "%";
+          },
+          offsetY: -10,
+          style: {
+            fontSize: '12px',
+            colors: ["#304758"]
+          }
+        },
+
+        xaxis: {
+          categories: ["Ice_fog", "Heavy_fog", "Thunder", "Ice_pellets", "Hail", "Glaze_or_Rime", "Smoke_or_Haze", "Blowing", "High_winds"],
+          position: 'top',
+          axisBorder: {
+            show: false
+          },
+          axisTicks: {
+            show: false
+          },
+          crosshairs: {
+            fill: {
+              type: 'gradient',
+              gradient: {
+                colorFrom: '#D8E3F0',
+                colorTo: '#BED1E6',
+                stops: [0, 100],
+                opacityFrom: 0.4,
+                opacityTo: 0.5,
+              }
+            }
+          },
+          tooltip: {
+            enabled: true,
+          }
+        },
+        yaxis: {
+          axisBorder: {
+            show: false
+          },
+          axisTicks: {
+            show: false,
+          },
+          labels: {
+            show: false,
+            formatter: function (val) {
+              return val + "%";
+            }
+          }
+
+        },
+        title: {
+          text: 'The percentage of crash on each weather condition',
+          floating: true,
+          offsetY: 330,
+          align: 'center',
+          style: {
+            color: '#444'
+          }
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+
+</script>
+{% endblock content %}

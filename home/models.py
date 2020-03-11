@@ -26,13 +26,19 @@ class AllCleanedCrashData(models.Model):
 
 class WeaTest(models.Model):
     id = models.BigIntegerField(verbose_name="id",primary_key=True)
-    cond1 = models.CharField(db_column='cond1', max_length=100, blank=True, null=True)  # Field name made lowercase.
-    cond2 = models.CharField(db_column='cond2', max_length=100, blank=True, null=True)  # Field name made lowercase.
-    cond3 = models.CharField(db_column='cond3', max_length=100, blank=True, null=True)  # Field name made lowercase.
+    ice_fog = models.FloatField(db_column='Ice_fog', max_length=8, blank=True, null=True)  # Field name made lowercase.
+    heavy_fog = models.FloatField(db_column='Heavy_fog', max_length=8, blank=True, null=True)  # Field name made lowercase.
+    thunder = models.FloatField(db_column='Thunder', max_length=8, blank=True, null=True)  # Field name made lowercase.
+    ice_pellets = models.FloatField(db_column='Ice_pellets', max_length=8, blank=True, null=True)  # Field name made lowercase.
+    hail = models.FloatField(db_column='Hail', max_length=8, blank=True, null=True)  # Field name made lowercase.
+    glaze_or_rime = models.FloatField(db_column='Glaze_or_Rime', max_length=8, blank=True, null=True)  # Field name made lowercase.
+    smoke_or_haze = models.FloatField(db_column='Smoke_or_Haze', max_length=8, blank=True, null=True)  # Field name made lowercase.
+    blowing = models.FloatField(db_column='Blowing', max_length=8, blank=True, null=True)  # Field name made lowercase.
+    high_winds = models.FloatField(db_column='High_winds', max_length=8, blank=True, null=True)  # Field name made lowercase.
 
     class Meta:
         managed = False
-        db_table = 'wea_test'
+        db_table = 'weather_precentage'
 
 
 
